@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  font-family: sans-serif;
+  grid-template-columns: repeat(minmax(auto, 1fr));
+  grid-template-rows: auto;
+  height: 100vh;
+}
+
+nav {
+  background: #464f77;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+nav h2,
+nav li {
+  cursor: pointer;
+  padding: 10px 0;
+  text-indent: 50px;
+}
+
+nav h2 {
+  color: white;
+  font-size: 1.4rem;
+}
+
+nav ul {
+  color: rgba(211, 211, 211, .8);
+  font-size: 1.2rem;
+}
+
+nav ul:last-of-type li {
+  text-decoration: line-through;
+}
+
+main {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  padding: 0 50px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 100px;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+}
+
+main li {
+  border-top: solid 1px rgba(0, 0, 0, .2);
+  padding: 20px 0;
+}
+
+li figure:last-of-type {
+  display: inline-block;
+  float: right;
+  padding: 19px;
+  position: relative;
+  bottom: 20px;
+}
+
+main p {
+  display: inline-block;
+  width: fit-content;
+}
+
+main li:hover {
+  background: rgba(148, 195, 232, .5);
+}
+
+main li:hover figure:last-of-type {
+  background: white;
+}
+
+main li figure:last-of-type:hover {
+  background: #ff7a7a;
+  cursor: pointer;
+}
+
+main p:hover {
+  color: #148fd5;
+  cursor: pointer;
+}
+
+.completed {
+  color: grey;
+  text-decoration: line-through;
+}
+  
+#adder {
+  color: #148fd5;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.count {
+  border-radius: 100px;
+  background-color: rgba(158, 161, 162, .5);
+  bottom: 4px;
+  color: rgba(211, 211, 211, .9);
+  font-size: .8rem;
+  font-weight: bold;
+  line-height: 1rem;
+  margin-left: 30px;
+  padding: 0 5px;
+  position: relative;
+  text-align: center;
+  width: 1rem;
+}
+
+main .count,
+nav h2 .count {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+main .count {
+  color: white;
+  background-color: #148fd5;
+}
+
+nav h2 .count {
+  background-color: rgba(158, 161, 162, .5);
+}
+  
+img {
+  position: relative;
+  top: 1px;
+  margin-right: 10px;
+}
+  
+.selected {
+  background: rgba(0, 0, 0, .2);
+}
+
+.selected .count {
+  background-color: #148fd5;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#overlay {
+  background-color: rgba(0, 0, 0, .2);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 1s, visibility 1s;
+  width: 100%;
+  z-index: 1;
+}
+
+#todo-form {
+  background-color: white;
+  bottom: 25%;
+  color: rgba(0, 0, 0, .6);
+  height: 350px;
+  left: 50%;
+  margin-left: -250px;
+  padding: 20px;
+  position: fixed;
+  transition: opacity .8s, visibility .8s;
+  width: 550px;
+  z-index: 2;
+}
+
+form dl {
+  align-items: end;
+  display: flex;
+  height: 2rem;
+  margin-bottom: 20px;
+}
+
+form dt, form dd {
+  display: inline-block;
+}
+
+form dt {
+  flex: 1;
+  margin-right: 10px;
+  position: relative;
+  top: 7px;
+  text-align: right;
+}
+
+form dd {
+  flex: 3;
+}
+
+#date-field {
+  display: flex;
+  gap: 15px;
+}
+
+select {
+  color: rgba(0, 0, 0, .6);
+  flex: 1;
+  padding: 7px;
+}
+
+.delimiter {
+  position: relative;
+  top: 7px;
+}
+
+input, textarea {
+  padding: 7px;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-buttons {
+  display: flex;
+  float: right;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+  position: relative;
+  top: 50px;
+  width: 73%;
+}
+
+button {
+  background: #148fd5;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  flex: 1;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px;
+}
