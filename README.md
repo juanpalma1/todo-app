@@ -2,4 +2,4 @@
 
 ## Description
 
-An todos management single-page app.
+A todos management single-page app.
